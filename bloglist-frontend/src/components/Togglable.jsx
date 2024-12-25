@@ -8,7 +8,7 @@ const Togglable = forwardRef((props, ref) => {
   const showWhenVisible = { display: visible ? "" : "none" };
 
   const toggleVisibility = () => {
-    console.log('click')
+    console.log("click");
     setVisible(!visible);
   };
 
@@ -25,7 +25,9 @@ const Togglable = forwardRef((props, ref) => {
       </div>
       <div style={showWhenVisible}>
         {props.children}
-        <div className="d-flex justify-content-end"><button onClick={toggleVisibility}>Cancel</button></div>
+        <div className="d-flex justify-content-end">
+          <button onClick={toggleVisibility}>Cancel</button>
+        </div>
       </div>
     </div>
   );

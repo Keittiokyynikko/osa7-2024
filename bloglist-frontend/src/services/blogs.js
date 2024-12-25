@@ -21,15 +21,15 @@ const create = async (newBlog) => {
 };
 
 const comment = async (comment) => {
-  const response = await axios.post(`${baseUrl}/${comment.blog}/comments`, comment)
-  return response.data
-}
+  const response = await axios.post(
+    `${baseUrl}/${comment.blog}/comments`,
+    comment,
+  );
+  return response.data;
+};
 
 const edit = async (editBlog) => {
-  const response = await axios.put(
-    `${baseUrl}/${editBlog.id}`,
-    editBlog,
-  );
+  const response = await axios.put(`${baseUrl}/${editBlog.id}`, editBlog);
   return response.data;
 };
 

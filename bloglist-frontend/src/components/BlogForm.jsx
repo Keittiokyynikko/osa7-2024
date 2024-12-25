@@ -3,7 +3,7 @@ import { setNotification } from "../reducers/notificationReducer";
 import { useDispatch } from "react-redux";
 import { createNewBlog } from "../reducers/blogReducer";
 
-const BlogForm = ({createBlog}) => {
+const BlogForm = ({ createBlog }) => {
   const [title, setTitle] = useState("");
   const [author, setAuthor] = useState("");
   const [url, setUrl] = useState("");
@@ -21,7 +21,7 @@ const BlogForm = ({createBlog}) => {
     };
 
     try {
-      dispatch(createNewBlog(newBlog))
+      dispatch(createNewBlog(newBlog));
       setTitle("");
       setAuthor("");
       setUrl("");
@@ -36,14 +36,13 @@ const BlogForm = ({createBlog}) => {
     }
   };
 
-  const formHolder = {
-    width: 250
-  }
-
   return (
     <div className="w-100 d-flex flex-column justify-content-center align-items-center">
       <h2 className="text-start">Create new</h2>
-      <form className="d-flex flex-column align-items-center" onSubmit={handleCreate}>
+      <form
+        className="d-flex flex-column align-items-center"
+        onSubmit={handleCreate}
+      >
         <div>
           <p className="m-0">title:</p>
           <input
@@ -57,7 +56,7 @@ const BlogForm = ({createBlog}) => {
           />
         </div>
         <div>
-        <p className="m-0">author:</p>
+          <p className="m-0">author:</p>
           <input
             className="author mb-2"
             data-testid="author"
@@ -69,7 +68,7 @@ const BlogForm = ({createBlog}) => {
           />
         </div>
         <div>
-        <p className="m-0">url:</p>
+          <p className="m-0">url:</p>
           <input
             className="url mb-4"
             data-testid="url"
@@ -80,7 +79,9 @@ const BlogForm = ({createBlog}) => {
             onChange={({ target }) => setUrl(target.value)}
           />
         </div>
-        <button className="mb-4" type="submit">Create</button>
+        <button className="mb-4" type="submit">
+          Create
+        </button>
       </form>
     </div>
   );

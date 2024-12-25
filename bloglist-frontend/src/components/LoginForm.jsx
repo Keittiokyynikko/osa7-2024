@@ -1,14 +1,14 @@
-import { useState } from "react";
-import loginService from "../services/login";
-import Error from "./Error";
+
 
 const LoginForm = (props) => {
   return (
     <>
-
-      <form className="d-flex flex-column justify-content-end" onSubmit={props.handleLogin}>
+      <form
+        className="d-flex flex-column justify-content-end"
+        onSubmit={props.handleLogin}
+      >
         <div>
-        <span className="me-2">username</span>
+          <span className="me-2">username</span>
           <input
             className="mb-2"
             data-testid="username"

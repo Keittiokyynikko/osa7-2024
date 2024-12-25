@@ -18,7 +18,8 @@
   margin-bottom: 10px;
 }
 
-td, th {
+td,
+th {
   text-align: left;
   padding-right: 15px;
 }
