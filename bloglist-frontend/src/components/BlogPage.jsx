@@ -20,6 +20,7 @@ const BlogPage = ({ handleEdit }) => {
       blog: blog.id,
     };
     blogService.comment(newComment);
+    setComment("")
   };
 
   const listStyle = {
