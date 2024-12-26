@@ -1,0 +1,12 @@
+POST http://localhost:3003/api/blogs
+Content-Type: application/json
+Authorization: Bearer TOKEN
+
+{
+    "user": "67432ea2882b8976acf53020",
+    "title": "Vielä uusi testi",
+    "author": "Ingrid Tuunela",
+    "url": "www.osoite.com",
+    "likes": 0,
+    "comments": []
+}

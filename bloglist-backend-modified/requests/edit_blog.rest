@@ -1,0 +1,9 @@
+PUT http://localhost:3001/api/blogs/id
+Content-Type: application/json
+
+{
+    "title": "Otsikko",
+    "author": "Anders Jäderud",
+    "likes": 5,
+    "url": "www.osoite.com"
+}
